@@ -14,8 +14,8 @@ It should be considered as both draft and canonical. Draft because I'm open to a
 - Use jshint
 - Use camelCaseVariableNamesIcanUnderstand
 - Avoid global variables
-- Do not use `eval()`
-- Use `===`
+- Do not use `eval`
+- Do Use `===`
 
 ##Javascript Files
 Use them for anything other than short snippets or code that is specific to that particular page view. They can be loaded in parallel miniifed and cached. It also makes it easier to lint your code.
@@ -66,10 +66,11 @@ function foo(
 ##Comments
 Comment well, but don't feel the need to over-explain. We all know what `var i=0;` does. Use the prefixes `//FIXME` and `//TODO` where appropriate.
 ##Variables
-Use global variables sparingly. Declare variables at the start of functions with a separate `var` statement for each to aid readability. Start with assigned variables. Use CAPS for constant values (But note that javascript has no real constants)
+Variable names should err on the long and descriptive side. Use camelCaseToSeparate#words (in contrast, filenames should be all lowercase and css classes should be [separated by hyphens](https://github.com/WWF-International/wwf-uk-css-style-guide "WWF-UK CSS style guide") ). Use global variables sparingly. Declare variables at the start of functions with a separate `var` statement for each to aid readability. Start with assigned variables. Use CAPS for constant values (But note that javascript has no real constants). Use `$` as a prefix when you're caching jQuery representations of the DOM object (which is a good idea).
 
 ```javascript
 var pandas=getPandas();
+var $partOfTheDOMImGonnaMessWith = $("#very-important-button");
 var TAU=Math.PI*2;
 var angleOfPandaUrinatingUpATree;
 
@@ -81,25 +82,29 @@ if statements get their brackets and braces for clarity eg.
 
 ```javascript
 if (condition){
-  // statements  
+    // statements  
 } else if {
-  // statements
+    // statements
 } else {
-  // statements
+    // statements
 }
 ```
 
 Use the ternary operator for simple conditional assignments as long as your code is still readable.
 
 ```javascript
-msg = score > 100 ? 'Great score' : 'Nice try';
+msg = score > 100 ? 'Great score' : 'Nice try!'
 
 ```
-If you're considering breaking a ternary operator out into separate lines for readability then an old fashioned `if (valueWeHave===valueWeWant){}` is more readble IMHO.
-  
+If you're considering breaking a ternary operator out into separate lines for readability then an old fashioned `if (valueWeHave===valueWeWant){}` is more readable IMHO.
+
 ##eval()
 Don't use it.
 
-##Equals
+##Equals or not
 Use `===` and `!==`
 
+
+##Object and Array Literals
+
+Use them for defining new objects and arrays eg `objFoo={foo:'baa'}` or `arrCountMeIn=[5,6,7,8]` rather than `new Object()` or `new Array()`
