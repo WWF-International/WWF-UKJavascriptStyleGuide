@@ -31,12 +31,12 @@ function foo() {
 }
 ```
 ##Spacings
-Spaces around `=`, `+`, and `( variable )` etc makes things more readable:
+Spaces around `=`, `+`, and `-` etc makes things more readable:
 
 ```javascript
-function foo( variable ) {
+function foo() {
     var something = 1,
-        somethingElse = 1 + 2 * something;
+        somethingElse = 1 + (2 * something);
 }
 ````
 
@@ -57,9 +57,9 @@ var pandaIntro = 'This charismatic and universally-loved species – the' +
 ```javascript
 $('.pandas')
     .find('.wild-pandas')
-    .count()
-    .countagain()
-    .addToSurvey();
+        .count()
+        .countagain()
+        .addToSurvey();
 ```
 ###Function arguments
 Should normally be on one line but if they are very long (which they should be if it helps understand their purpose) then use one per line like so:
@@ -68,7 +68,7 @@ Should normally be on one line but if they are very long (which they should be i
 function foo(
     veryClearlyDescribedArgument,
     anotherEasilyUnderstoodArgument,
-    thisOneIsVeryLongToo ){
+    thisOneIsVeryLongToo){
 //...
 }
 ```
@@ -79,7 +79,7 @@ Use global variables sparingly. Declare variables at the start of functions with
 
 ```javascript
 var pandas = getPandas();
-var TAU = Math.PI*2;
+var TAU = Math.PI * 2;
 var angleOfPandaUrinatingUpATree;
 
 ```
@@ -89,7 +89,7 @@ Use them. I'm very good at forgetting too. JsHint is very good at reminding me.
 if statements get their brackets and braces for clarity eg.
 
 ```javascript
-if ( condition ){
+if (condition){
   // statements  
 } else if {
   // statements
@@ -104,7 +104,7 @@ Use the ternary operator for simple conditional assignments as long as your code
 msg = score > 100 ? 'Great score' : 'Nice try';
 
 ```
-If you're considering breaking a ternary operator out into separate lines for readability then an old fashioned `if ( valueWeHave === valueWeWant ){}` is more readble IMHO.
+If you're considering breaking a ternary operator out into separate lines for readability then an old fashioned `if (valueWeHave === valueWeWant){}` is more readble IMHO.
   
 ##eval()
 Don't use it.
