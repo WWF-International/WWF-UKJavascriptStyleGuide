@@ -1,4 +1,4 @@
-#WWF-UK Javascript Stlye guide
+#WWF-UK Javascript Style guide
 
 This document draws heavily from the following guides written by smarter people than me:
 
@@ -25,11 +25,20 @@ Adding `"use strict"` to the start of a function tells the browser to use strict
 
 ```javascript
 function foo() {
-    var whatsInTheTtin='beans';
-    watsInTheTin=whatsInTheTtin+' and sausages';
+    var whatsInTheTtin = 'beans';
+    watsInTheTin = whatsInTheTtin + ' and sausages';
     return whatsInTheTtin;
 }
 ```
+##Spacings
+Spaces around `=`, `+`, and `-` etc makes things more readable:
+
+```javascript
+function foo() {
+    var something = 1,
+        somethingElse = 1 + (2 * something);
+}
+````
 
 ##Indentation
 Spaces. Multiples of four.
@@ -48,9 +57,9 @@ var pandaIntro = 'This charismatic and universally-loved species – the' +
 ```javascript
 $('.pandas')
     .find('.wild-pandas')
-    .count()
-    .countagain()
-    .addToSurvey();
+        .count()
+        .countagain()
+        .addToSurvey();
 ```
 ###Function arguments
 Should normally be on one line but if they are very long (which they should be if it helps understand their purpose) then use one per line like so:
@@ -69,8 +78,8 @@ Comment well, but don't feel the need to over-explain. We all know what `var i=0
 Use global variables sparingly. Declare variables at the start of functions with a separate `var` statement for each to aid readability. Start with assigned variables. Use CAPS for constant values (But note that javascript has no real constants)
 
 ```javascript
-var pandas=getPandas();
-var TAU=Math.PI*2;
+var pandas = getPandas();
+var TAU = Math.PI * 2;
 var angleOfPandaUrinatingUpATree;
 
 ```
@@ -95,7 +104,7 @@ Use the ternary operator for simple conditional assignments as long as your code
 msg = score > 100 ? 'Great score' : 'Nice try';
 
 ```
-If you're considering breaking a ternary operator out into separate lines for readability then an old fashioned `if (valueWeHave===valueWeWant){}` is more readble IMHO.
+If you're considering breaking a ternary operator out into separate lines for readability then an old fashioned `if (valueWeHave === valueWeWant){}` is more readble IMHO.
   
 ##eval()
 Don't use it.
