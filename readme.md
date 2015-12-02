@@ -6,7 +6,7 @@ This document draws heavily from the following guides written by smarter people 
 - http://javascript.crockford.com/code.html
 - https://github.com/airbnb/javascript
 
-It should be considered as both draft and canonical. Draft because I'm open to a debate on the practices defined. Canonical because in the absence of that debate the guidance here should be reflected in your code.
+It should be considered as both draft *and* canonical. Draft because I'm open to a debate on the practices defined. Canonical because in the absence of that debate the guidance here should be reflected in your code.
 
 ##tl;dr
 - Use .js files
@@ -68,7 +68,7 @@ Should normally be on one line but if they are very long (which they should be i
 function foo(
     veryClearlyDescribedArgument,
     anotherEasilyUnderstoodArgument,
-    thisOneIsVeryLongToo){
+    thisOneIsVeryLongToo) {
 //...
 }
 ```
@@ -89,9 +89,9 @@ Use them. I'm very good at forgetting too. JsHint is very good at reminding me.
 if statements get their brackets and braces for clarity eg.
 
 ```javascript
-if (condition){
-  // statements  
-} else if {
+if (conditions) {
+  // statements
+} else if (conditions) {
   // statements
 } else {
   // statements
@@ -105,7 +105,7 @@ msg = score > 100 ? 'Great score' : 'Nice try';
 
 ```
 If you're considering breaking a ternary operator out into separate lines for readability then an old fashioned `if (valueWeHave === valueWeWant){}` is more readble IMHO.
-  
+
 ##eval()
 Don't use it.
 
