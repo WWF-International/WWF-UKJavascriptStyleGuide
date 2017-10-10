@@ -58,7 +58,12 @@ var pandaIntro = 'This charismatic and universally-loved species – the' +
 $('.pandas')
     .find('.wild-pandas')
         .count()
-        .countagain()
+        .countAgain()
+        .addToSurvey()
+    .end()
+    .find('.baby-pandas')
+        .count()
+        .countAgain()
         .addToSurvey();
 ```
 ###Function arguments
