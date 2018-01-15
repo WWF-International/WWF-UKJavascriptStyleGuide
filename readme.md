@@ -25,9 +25,9 @@ Adding `"use strict"` to the start of a function tells the browser to use strict
 
 ```javascript
 function foo() {
-    var whatsInTheTtin = 'beans';
-    watsInTheTin = whatsInTheTtin + ' and sausages';
-    return whatsInTheTtin;
+    var whatsInTheTin = 'beans';
+    whatsInTheTin = whatsInTheTin + ' and sausages';
+    return whatsInTheTin;
 }
 ```
 
