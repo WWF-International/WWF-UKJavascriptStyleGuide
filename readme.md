@@ -2,7 +2,7 @@
 
 This document draws heavily from the following guides written by smarter people than me:
 
-- https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
+- https://google.github.io/styleguide/jsguide.html
 - http://javascript.crockford.com/code.html
 - https://github.com/airbnb/javascript
 
